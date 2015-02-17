@@ -7,7 +7,7 @@ module Searchkick
 
     attr_reader :klass, :response, :options
 
-    def_delegators :results, :each, :any?, :empty?, :size, :length, :slice, :[], :to_ary
+    def_delegator :results, :each
 
     def initialize(klass, response, options = {})
       @klass = klass
